@@ -60,6 +60,7 @@ public class Cola<T> implements PiCoLa<T> {
                 rabo.siguiente = n;
                 rabo = n;
             }
+            tamanio++;
         }
     }
 
@@ -77,6 +78,7 @@ public class Cola<T> implements PiCoLa<T> {
         if(cabeza == null){
             rabo = null;
         }
+        tamanio--;
         return c.elemento;
     }
 
@@ -167,6 +169,8 @@ public class Cola<T> implements PiCoLa<T> {
             }
             c = c.siguiente;
         }
+
+        s += "]";
 
         return s;
     }
